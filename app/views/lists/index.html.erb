@@ -1,14 +1,17 @@
-<div class="container">
-  <h1>Save any kind of movies</h1>
-  <h3>📽 🎬</h3>
+<header>
+  <div class="overlay">
+    <h1>📽 🎬<strong>Save any kind of movies</strong>📽 🎬</h1>
+    <br>
+    <button><%= link_to "Create a movie list", new_list_path %></button>
+  </div>
+</header>
 
-  <ul>
+<div>
+  <div class="cards">
     <% @lists.each do |list| %>
-      <li>
-        <%= link_to list.name, list_path(list) %>
-      </li>
+        <div class="card-category">
+             <%= link_to list.name, list_path(list) %>
+         </div>
     <% end %>
-  </ul>
-
-  <%= link_to "Create a movie list", new_list_path, class: "btn btn-primary" %>
+  </div>
 </div>
