@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="text-center">New comment</h1>
+
+  <div class="w-50 mx-auto">
+    <%= simple_form_for([@list, @bookmark]) do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie%>
+      <%= f.submit 'Add bookmark' %>
+    <% end %>
+  </div>
+
+  <div class="text-center">
+    <%= link_to "Back to lists", lists_path, class: "btn btn-secondary mt-3" %>
+  </div>
+
+</div>

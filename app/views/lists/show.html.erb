@@ -1,0 +1,39 @@
+
+</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1><strong><%= @list.name %></strong></h1>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container my-3" class="d-flex align-content-stretch flex-wrap">
+    <div class="cards" style="width: 18rem;">
+        <% @list.bookmarks.each do |bookmark| %>
+          <img class="card-img-top" src="<%= bookmark.movie.poster_url %>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"> <%= bookmark.movie.title %></h5>
+            <p class="card-text"> <%= bookmark.movie.overview %></p>
+            <div class="d-flex justify-content-between">
+              <p class="card-comment"> <i> ❝ <%= bookmark.comment %> </i></p>
+              <%= link_to '🗑️', bookmark_path, method: :delete, data: { confirm: 'Are u sure ?' } %>
+            </div>
+          </div>
+        <% end %>
+            <%= link_to "let a comment", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    </div>
+</div>
+
+
+
+
+
+
+
+  <%= link_to "Annihilate", list_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Edit', edit_list_path(@list) %> |
+  <%= link_to "Back to lists", lists_path %>

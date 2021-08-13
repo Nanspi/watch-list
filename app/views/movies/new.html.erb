@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="text-center">New movie</h1>
+
+  <%= render "form", movie: @movie %>
+
+  <div class="text-center">
+    <%= link_to "Back to movies", movies_lists_path, class: "btn btn-secondary mt-3" %>
+  </div>
+
+</div>

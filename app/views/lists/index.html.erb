@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Save any kind of movies</h1>
+  <h3>📽 🎬</h3>
+
+  <ul>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Create a movie list", new_list_path, class: "btn btn-primary" %>
+</div>
