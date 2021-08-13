@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_fc378457-82a0-47fb-ad55-9228af230594",
+      "org_id": "user_c9821f60-ca05-4002-a5d4-0018900a4fc2",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_fc378457-82a0-47fb-ad55-9228af230594.git",
+      "name": "Nans_movie_list",
+      "alias": "Nans_movie_list"
+    }
+  ]
+}
